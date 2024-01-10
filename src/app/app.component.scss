@@ -1,0 +1,14 @@
+.right-align{
+  margin-left:auto
+}
+
+.toolbar-items{
+  height: 100%;
+  & > a {
+    display: inline-block;
+    height: 100%;
+    margin: 0px 16px;
+    text-decoration: none;
+    line-height: 64px;
+  }
+}
