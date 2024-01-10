@@ -1,14 +1,21 @@
-<mat-toolbar>
-    <span>Icon Here</span>
-    <h1 style="margin-left: 16px">Headin' West Hunt Consulting</h1>
-    <div class="right-align toolbar-items">
-      <a routerLink="/">Home</a>
-      <a routerLink="/service">Service</a>
-      <a routerLink="/outfitted">Outfitted Hunts</a>
-      <a routerLink="/diy">DIY Hunts</a>
-      <a routerLink="/before">Before You Decide</a>
-      <a routerLink="/about">About</a>
-    </div>
+<mat-toolbar color="primary" class="example-toolbar">
+	<button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon>menu</mat-icon></button>
+	<h1 class="example-app-name">Headin' West Hunt Consulting</h1>
 </mat-toolbar>
+<mat-sidenav-container class="sidenav-container" autosize>
+	<mat-sidenav #sidenav mode="side" opened="true">
+		<mat-nav-list>
+			<mat-list-item class="nav-item">
+        <mat-icon mat-list-icon>home</mat-icon>
+				<span class="full-width" *ngIf="isExpanded || isShowing">Parent Menu</span>
+			</mat-list-item>
+		</mat-nav-list>
+	</mat-sidenav>
 
-<router-outlet></router-outlet>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+
+

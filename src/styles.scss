@@ -36,6 +36,7 @@ $headin-west-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($headin-west-theme);
 @include app.theme($headin-west-theme);
+@include mat.toolbar-theme($headin-west-theme);
 
 /* You can add global styles to this file, and also import other style files */
 

@@ -1,14 +1,9 @@
-.right-align{
-  margin-left:auto
+.sidenav-container {
+  //subtract toolbar height
+  height: calc(100% - 64px);
 }
 
-.toolbar-items{
-  height: 100%;
-  & > a {
-    display: inline-block;
-    height: 100%;
-    margin: 0px 16px;
-    text-decoration: none;
-    line-height: 64px;
-  }
+.full-width {
+  width: 100%;
 }
+
