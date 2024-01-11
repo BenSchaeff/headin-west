@@ -7,3 +7,15 @@
   width: 100%;
 }
 
+
+mat-sidenav {
+  .entry{
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+  }
+}
+
+.expanded {
+  width: 150px;
+}
