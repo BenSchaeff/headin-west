@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material.module';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
+  styles: [],
   standalone: true,
   imports: [CommonModule, MaterialModule]
 })

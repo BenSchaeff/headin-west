@@ -7,7 +7,6 @@
   width: 100%;
 }
 
-
 mat-sidenav {
   .entry{
       display: flex;
@@ -18,4 +17,13 @@ mat-sidenav {
 
 .expanded {
   width: 150px;
+}
+
+.content{
+  width: 60%;
+  margin: 0px 20% 0px calc(20px + 57px) !important;
+}
+
+mat-sidenav-container{
+  background-color: lightgray;
 }
