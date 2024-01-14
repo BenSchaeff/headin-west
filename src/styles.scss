@@ -17,6 +17,62 @@
 $headin-west-primary: mat.define-palette(mat.$cyan-palette);
 $headin-west-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 
+// Deep Forest Green
+$forest-green: #00563F;
+
+// Earthy Brown
+$earthy-brown: #8B4513;
+
+// Mossy Oak Camo
+$mossy-oak: #4E4B37;
+
+// Hunter Orange
+$hunter-orange: #FFA500;
+
+// Steel Gray
+$steel-gray: #666666;
+
+// Sky Blue
+$sky-blue: #87CEEB;
+
+// Wood Bark
+$wood-bark: #926F5B;
+
+$custom-palette: (
+  50 : #e5eae3,
+  100 : #becab8,
+  200 : #93a789,
+  300 : #68835a,
+  400 : #476936,
+  500 : #274e13,
+  600 : #234711,
+  700 : #1d3d0e,
+  800 : #17350b,
+  900 : #0e2506,
+  A100 : #7dff61,
+  A200 : #53ff2e,
+  A400 : #2cfa00,
+  A700 : #27e100,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #ffffff,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  ),
+);
+$headin-west-primary: mat.define-palette($custom-palette);
+
+
 //$my-pallette: mat.define-pallette()
 // The warn palette is optional (defaults to red).
 $headin-west-warn: mat.define-palette(mat.$red-palette);

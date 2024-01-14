@@ -10,14 +10,16 @@
       <a mat-list-item>
         <span class="entry">
           <mat-icon>house</mat-icon>
-          <span *ngIf="!isCollapsed">Dashboard</span>
+          <span *ngIf="!isCollapsed">Home</span>
         </span>
       </a>
     </mat-nav-list>
 	</mat-sidenav>
 
   <mat-sidenav-content class="content">
+    <div class="content-holder">
     <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 
 </mat-sidenav-container>

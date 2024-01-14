@@ -19,11 +19,7 @@ mat-sidenav {
   width: 150px;
 }
 
-.content{
-  width: 60%;
-  margin: 0px 20% 0px calc(20px + 57px) !important;
-}
-
-mat-sidenav-container{
-  background-color: lightgray;
+.content-holder{
+  width: 70%;
+  margin-left: 2%;
 }
