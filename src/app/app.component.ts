@@ -11,7 +11,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
   styleUrls: ['./app.component.scss'],
   styles: [],
   standalone: true,
-  imports: [CommonModule, MaterialModule]
+  imports: [CommonModule, MaterialModule, SlickCarouselModule]
 })
 export class AppComponent {
   title = 'headin-west';
@@ -43,4 +43,37 @@ export class AppComponent {
       this.isCollapsed = !this.isCollapsed;
     }
   }
+
+  slides = [
+    {img: '../assets/elk1.jpg'},
+    {img: '../assets/elk2.jpg'},
+    {img: '../assets/elk3.jpg'},
+    {img: '../assets/elk-pg-banner.jpg'}
+  ];
+  slideConfig = {"slidesToShow": 3, "slidesToScroll": 2, 'vertical': true};
+
+  addSlide() {
+    this.slides.push({img: "http://placehold.it/350x150/777777"})
+  }
+
+  removeSlide() {
+    this.slides.length = this.slides.length - 1;
+  }
+
+  slickInit(e: any) {
+    console.log('slick initialized');
+  }
+
+  breakpoint(e: any) {
+    console.log('breakpoint');
+  }
+
+  afterChange(e: any) {
+    console.log('afterChange');
+  }
+
+  beforeChange(e: any) {
+    console.log('beforeChange');
+  }
+
 }

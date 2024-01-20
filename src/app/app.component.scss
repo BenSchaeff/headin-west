@@ -24,6 +24,26 @@ mat-toolbar{
 }
 
 .content-holder{
-  width: 70%;
+  width: 65%;
   margin-left: 2%;
 }
+
+.content{
+  display: flex;
+}
+
+.vertical-carousel{
+  margin-left: 5%;
+  width: 26%;
+}
+
+.carousel{
+  height: 85%;
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.slick-prev{
+  margin-top: auto;
+}
+

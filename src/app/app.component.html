@@ -48,8 +48,34 @@
 
   <mat-sidenav-content class="content">
     <div class="content-holder">
-    <router-outlet></router-outlet>
+      <router-outlet></router-outlet>
     </div>
+
+    <div class="vertical-carousel" *ngIf="!isMobile">
+
+      <ngx-slick-carousel class="carousel"
+      #slickModal="slick-carousel"
+      [config]="slideConfig"
+      (init)="slickInit($event)"
+      (breakpoint)="breakpoint($event)"
+      (afterChange)="afterChange($event)"
+      (beforeChange)="beforeChange($event)">
+      <div *ngFor="let slide of slides">
+        <div ngxSlickItem class="slide">
+          <img src="{{ slide.img }}" alt="" width="100%">
+          </div>
+      </div>
+    </ngx-slick-carousel>
+
+    <div style="margin-top: 8px">
+      <!-- <button (click)="removeSlide()">Remove</button>
+      <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+      <button (click)="slickModal.unslick()">unslick</button> -->
+      <button mat-raised-button (click)="slickModal.slickPrev()">Previous</button>
+      <button mat-raised-button (click)="slickModal.slickNext()" style="margin-left: 4px">Next</button>
+    </div>
+  </div>
+
   </mat-sidenav-content>
 
 </mat-sidenav-container>

@@ -1,17 +1,7 @@
 <h1>Home</h1>
 
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, nunc non hendrerit bibendum, nisi odio
-  facilisis neque, a volutpat sapien quam eget justo. Pellentesque habitant morbi tristique senectus et netus et malesuada
-  fames ac turpis egestas. Mauris sed ex ut nunc fermentum cursus. Suspendisse potenti. Nulla facilisi.
-</p>
+<p><a href="mailto:headingwestelk@gmail.com">Send email</a></p>
 
-<p>
-  Vestibulum tincidunt, nulla nec facilisis varius, dui massa sollicitudin elit, sit amet facilisis urna turpis nec libero.
-  Fusce nec magna nec ligula sodales pellentesque. Proin ut tortor in lacus dignissim tristique. Curabitur nec lacinia leo.
-  In hac habitasse platea dictumst. Aliquam erat volutpat. Sed dignissim sagittis lacus, id tempor ligula. Integer consequat dui at nulla auctor,
-  sit amet rhoncus nisl aliquet.
-</p>
 
 <h2>Nullam Gravida Elit In Ligula</h2>
 
@@ -26,25 +16,3 @@ Duis auctor euismod ligula, id pharetra libero tincidunt a. Sed vel odio non eli
 Integer sodales lectus nec feugiat sodales. Morbi nec eros vel orci posuere fermentum.
 </p>
 
-<ngx-slick-carousel class="carousel"
-  #slickModal="slick-carousel"
-  [config]="slideConfig"
-  (init)="slickInit($event)"
-  (breakpoint)="breakpoint($event)"
-  (afterChange)="afterChange($event)"
-  (beforeChange)="beforeChange($event)">
-  <div *ngFor="let slide of slides">
-    <div ngxSlickItem class="slide">
-      <img src="{{ slide.img }}" alt="" width="100%">
-      </div>
-  </div>
-</ngx-slick-carousel>
-
-<div style="margin-top: 8px">
-  <!-- <button (click)="removeSlide()">Remove</button>
-  <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
-  <button (click)="slickModal.unslick()">unslick</button> -->
-
-  <button mat-raised-button (click)="slickModal.slickNext()" style="margin-right: 4px">Next</button>
-  <button mat-raised-button (click)="slickModal.slickPrev()">Previous</button>
-</div>
