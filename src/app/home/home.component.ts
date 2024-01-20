@@ -16,14 +16,9 @@ export class HomeComponent {
   slides = [
     {img: '../assets/elk1.jpg'},
     {img: '../assets/elk2.jpg'},
-    {img: '../assets/elk1.jpg'},
-    {img: '../assets/elk2.jpg'},
-    {img: '../assets/elk1.jpg'},
-    {img: '../assets/elk2.jpg'},
-    {img: '../assets/elk1.jpg'},
-    {img: '../assets/elk2.jpg'},
+    {img: '../assets/elk3.jpg'},
   ];
-  slideConfig = {"slidesToShow": 4, "slidesToScroll": 2};
+  slideConfig = {"slidesToShow": 3, "slidesToScroll": 2};
 
   addSlide() {
     this.slides.push({img: "http://placehold.it/350x150/777777"})

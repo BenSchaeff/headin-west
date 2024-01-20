@@ -15,8 +15,12 @@ mat-sidenav {
   }
 }
 
+mat-toolbar{
+  padding-left: 6px !important;
+}
+
 .expanded {
-  width: 150px;
+  width: 200px;
 }
 
 .content-holder{

@@ -8,7 +8,7 @@ import { BeforeYouDecideComponent} from './before-you-decide/before-you-decide.c
 import { AboutComponent } from './about/about.component'
 
 export const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: 'home', component: HomeComponent},
   {path: 'service', component: ServiceComponent},
   {path: 'outfitted', component: OutfittedHuntsComponent},
   {path: 'diy', component: DiyHuntsComponent},
