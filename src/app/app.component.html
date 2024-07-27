@@ -1,6 +1,8 @@
 <mat-toolbar color="primary" class="example-toolbar">
 	<button mat-icon-button (click)="toggleMenu()"><mat-icon>menu</mat-icon></button>
-	<span style='font-size:200%; padding-left: 4px;'>Headin' West Hunt Consulting</span>
+	<span id="main-header">Headin' West Hunt Consulting</span>
+  <img src="../assets/logo.png" id="logo">
+
 </mat-toolbar>
 
 <mat-sidenav-container class="sidenav-container" autosize>
@@ -47,12 +49,14 @@
 	</mat-sidenav>
 
   <mat-sidenav-content class="content">
-    <div class="content-holder">
+    <div class="content-holder" [ngClass]="isMobile ? 'isMobile': ''">
       <router-outlet></router-outlet>
     </div>
 
     <div class="vertical-carousel" *ngIf="!isMobile">
-
+      <button mat-icon-button (click)="slickModal.slickPrev()" class="slick-button">
+        <mat-icon>arrow_circle_up</mat-icon>
+      </button>
       <ngx-slick-carousel class="carousel"
       #slickModal="slick-carousel"
       [config]="slideConfig"
@@ -60,22 +64,17 @@
       (breakpoint)="breakpoint($event)"
       (afterChange)="afterChange($event)"
       (beforeChange)="beforeChange($event)">
-      <div *ngFor="let slide of slides">
-        <div ngxSlickItem class="slide">
-          <img src="{{ slide.img }}" alt="" width="100%">
-          </div>
-      </div>
-    </ngx-slick-carousel>
+        <div *ngFor="let slide of slides">
+          <div ngxSlickItem class="slide">
+            <img src="{{ slide.img }}" alt="" width="100%">
+            </div>
+        </div>
+      </ngx-slick-carousel>
+      <button mat-icon-button (click)="slickModal.slickNext()" class="slick-button">
+        <mat-icon>arrow_circle_down</mat-icon>
+      </button>
 
-    <div style="margin-top: 8px">
-      <!-- <button (click)="removeSlide()">Remove</button>
-      <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
-      <button (click)="slickModal.unslick()">unslick</button> -->
-      <button mat-raised-button (click)="slickModal.slickPrev()">Previous</button>
-      <button mat-raised-button (click)="slickModal.slickNext()" style="margin-left: 4px">Next</button>
     </div>
-  </div>
-
   </mat-sidenav-content>
 
 </mat-sidenav-container>

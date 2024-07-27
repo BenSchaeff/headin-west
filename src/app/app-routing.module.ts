@@ -13,7 +13,8 @@ export const routes: Routes = [
   {path: 'outfitted', component: OutfittedHuntsComponent},
   {path: 'diy', component: DiyHuntsComponent},
   {path: 'before', component: BeforeYouDecideComponent},
-  {path: 'about', component: AboutComponent}
+  {path: 'about', component: AboutComponent},
+  {path: '', pathMatch: 'full', redirectTo: 'home'}
 ];
 
 @NgModule({
